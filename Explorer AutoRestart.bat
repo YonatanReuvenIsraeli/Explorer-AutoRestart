@@ -2,21 +2,10 @@
 setlocal
 title Explorer AutoRestart
 echo Program Name: Explorer AutoRestart
-echo Version: 1.0.1
+echo Version: 1.0.2
 echo Developer: @YonatanReuvenIsraeli
 echo Website: https://www.yonatanreuvenisraeli.dev
 echo License: GNU General Public License v3.0
-net session > nul 2>&1
-if not "%errorlevel%"=="0" goto "NotAdministrator"
-goto "Start"
-
-:"NotAdministrator"
-echo.
-echo Please run this batch file as an administrator. Press any key to close this batch file.
-pause > nul 2>&1
-goto "Close"
-
-:"Start"
 echo.
 echo Cheching if "%windir%\explorer.exe" exist.
 if not exist "%windir%\explorer.exe" goto "ExplorerNotExist"
