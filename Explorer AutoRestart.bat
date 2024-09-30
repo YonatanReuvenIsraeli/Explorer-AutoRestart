@@ -1,8 +1,8 @@
 @echo off
 setlocal
-title File Explorer AutoRestart
-echo Program Name: File Explorer AutoRestart
-echo Version: 1.0.0
+title Explorer AutoRestart
+echo Program Name: Explorer AutoRestart
+echo Version: 1.0.1
 echo Developer: @YonatanReuvenIsraeli
 echo Website: https://www.yonatanreuvenisraeli.dev
 echo License: GNU General Public License v3.0
