@@ -2,12 +2,12 @@
 setlocal
 title Explorer AutoRestart
 echo Program Name: Explorer AutoRestart
-echo Version: 1.0.3
+echo Version: 1.0.4
 echo Developer: @YonatanReuvenIsraeli
 echo Website: https://www.yonatanreuvenisraeli.dev
 echo License: GNU General Public License v3.0
 echo.
-echo Cheching if "%windir%\explorer.exe" exist.
+echo Checking if "%windir%\explorer.exe" exist.
 if not exist "%windir%\explorer.exe" goto "ExplorerNotExist"
 echo "%windir%\explorer.exe" exists.
 echo.
