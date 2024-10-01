@@ -2,7 +2,7 @@
 setlocal
 title Explorer AutoRestart
 echo Program Name: Explorer AutoRestart
-echo Version: 1.0.5
+echo Version: 1.0.6
 echo Developer: @YonatanReuvenIsraeli
 echo Website: https://www.yonatanreuvenisraeli.dev
 echo License: GNU General Public License v3.0
@@ -13,6 +13,7 @@ echo "%windir%\explorer.exe" exists.
 echo.
 echo Press any key to auto-restart explorer.exe.
 pause > nul 2>&1
+cls
 echo Auto-restarting explorer.exe until this batch file is closed.
 goto "Explorer"
 
