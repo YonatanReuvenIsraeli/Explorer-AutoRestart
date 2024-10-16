@@ -2,7 +2,7 @@
 setlocal
 title Explorer AutoRestart
 echo Program Name: Explorer AutoRestart
-echo Version: 1.0.6
+echo Version: 1.0.7
 echo Developer: @YonatanReuvenIsraeli
 echo Website: https://www.yonatanreuvenisraeli.dev
 echo License: GNU General Public License v3.0
@@ -23,7 +23,7 @@ pause > nul 2>&1
 goto "Close"
 
 :"Explorer"
-tasklist | findstr /l explorer.exe > nul 2>&1
+tasklist | find /i "explorer.exe" > nul 2>&1
 if not "%errorlevel%"=="0" start explorer.exe
 goto "Explorer"
 
