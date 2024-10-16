@@ -2,10 +2,21 @@
 setlocal
 title Explorer AutoRestart
 echo Program Name: Explorer AutoRestart
-echo Version: 1.0.7
+echo Version: 1.0.8
 echo Developer: @YonatanReuvenIsraeli
 echo Website: https://www.yonatanreuvenisraeli.dev
 echo License: GNU General Public License v3.0
+net user > nul 2>&1
+if not "%errorlevel%"=="0" goto "InWindowsRecoveryEnvironment"
+goto "Start"
+
+:"InWindowsRecoveryEnvironment"
+echo.
+echo You are in Windows Recovery Environment! You must run this batch file in Windows. Press any key to close this batch file.
+pause > nul 2>&1
+goto "Close"
+
+:"Start"
 echo.
 echo Checking if "%windir%\explorer.exe" exist.
 if not exist "%windir%\explorer.exe" goto "ExplorerNotExist"
