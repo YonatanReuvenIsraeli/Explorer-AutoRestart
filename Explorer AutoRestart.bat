@@ -2,18 +2,18 @@
 setlocal
 title Explorer AutoRestart
 echo Program Name: Explorer AutoRestart
-echo Version: 1.0.10
+echo Version: 1.0.11
 echo License: GNU General Public License v3.0
 echo Developer: @YonatanReuvenIsraeli
 echo GitHub: https://github.com/YonatanReuvenIsraeli
 echo Sponsor: https://github.com/sponsors/YonatanReuvenIsraeli
 "%windir%\System32\net.exe" user > nul 2>&1
-if not "%errorlevel%"=="0" goto "InWindowsRecoveryEnvironment"
+if not "%errorlevel%"=="0" goto "InWindowsPreinstallationEnvironmentWindowsRecoveryEnvironment"
 goto "Start"
 
-:"InWindowsRecoveryEnvironment"
+:"InWindowsPreinstallationEnvironmentWindowsRecoveryEnvironment"
 echo.
-echo You are in Windows Recovery Environment! You must run this batch file in Windows. Press any key to close this batch file.
+echo You are in Windows Preinstallation Environment or Windows Recovery Environment! You must run this batch file in Windows. Press any key to close this batch file.
 pause > nul 2>&1
 goto "Close"
 
