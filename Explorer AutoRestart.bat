@@ -2,7 +2,7 @@
 title Explorer AutoRestart
 setlocal
 echo Program Name: Explorer AutoRestart
-echo Version: 1.0.17
+echo Version: 1.0.18
 echo License: GNU General Public License v3.0
 echo Developer: @YonatanReuvenIsraeli
 echo GitHub: https://github.com/YonatanReuvenIsraeli
@@ -19,7 +19,7 @@ goto "Close"
 
 :"Start"
 echo.
-echo Checking if "%windir%\explorer.exe" exist.
+echo Checking if "%windir%\explorer.exe" exists.
 if not exist "%windir%\explorer.exe" goto "ExplorerNotExist"
 echo "%windir%\explorer.exe" exists.
 echo.
