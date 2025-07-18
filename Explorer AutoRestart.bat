@@ -30,7 +30,7 @@ echo Auto-restarting the process "explorer.exe" if it is stopped until this batc
 goto "Explorer"
 
 :"ExplorerNotExist"
-echo "%windir%\explorer.exe" does not exist! Press any key to close this batch file.
+echo "%windir%\explorer.exe" does not exist! This batch file cannot auto-restart the process "explorer.exe". Press any key to close this batch file.
 pause > nul 2>&1
 goto "Close"
 
