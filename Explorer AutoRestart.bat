@@ -2,7 +2,7 @@
 title Explorer AutoRestart
 setlocal
 echo Program Name: Explorer AutoRestart
-echo Version: 1.0.18
+echo Version: 1.0.19
 echo License: GNU General Public License v3.0
 echo Developer: @YonatanReuvenIsraeli
 echo GitHub: https://github.com/YonatanReuvenIsraeli
