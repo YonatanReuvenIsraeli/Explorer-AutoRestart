@@ -2,7 +2,7 @@
 title Explorer AutoRestart
 setlocal
 echo Program Name: Explorer AutoRestart
-echo Version: 1.0.19
+echo Version: 2.0.0
 echo License: GNU General Public License v3.0
 echo Developer: @YonatanReuvenIsraeli
 echo GitHub: https://github.com/YonatanReuvenIsraeli
@@ -35,9 +35,16 @@ pause > nul 2>&1
 goto "Close"
 
 :"Explorer"
+if not exist "%windir%\explorer.exe" goto "ExplorerNotExistRestart"
 "%windir%\System32\tasklist.exe" | "%windir%\System32\find.exe" /i "explorer.exe" > nul 2>&1
 if not "%errorlevel%"=="0" "%windir%\explorer.exe"
 goto "Explorer"
+
+:"ExplorerNotExistRestart"
+cls
+echo "%windir%\explorer.exe" does not exist! This batch file cannot auto-restart the process "explorer.exe". Press any key to close this batch file.
+pause > nul 2>&1
+goto "Close"
 
 :"Close"
 endlocal
